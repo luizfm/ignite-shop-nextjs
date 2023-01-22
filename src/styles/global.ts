@@ -1,0 +1,24 @@
+import { Roboto } from "@next/font/google";
+import { globalCss } from ".";
+
+export const ROBOTO = Roboto({
+  weight: "400",
+  subsets: ["latin"]
+})
+
+export const globalStyles = globalCss({
+  '*': {
+    margin: 0,
+    padding: 0
+  },
+  body: {
+    backgroundColor: "$gray900",
+    color: "$gray100",
+    '-webkit-font-smoothing': 'antialiased',
+  },
+
+  'body, input, textarea, button': {
+    fontFamily: ROBOTO.style.fontFamily,
+    fontWeight: 400,
+  }
+})

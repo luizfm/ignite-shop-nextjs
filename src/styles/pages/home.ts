@@ -2,16 +2,14 @@ import { styled } from "..";
 
 export const HomeContainer = styled('main', {
   display: 'flex',
-  maxWidth: 'calc(100vw -  ((100vw - 1180px) / 2))',
   width: '100%',
-  marginLeft: 'auto',
   minHeight: 656,
+  padding: '4rem 0 1rem',
 })
 
-export const Product = styled('a', {
+export const Product = styled('div', {
   background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
   borderRadius: 8,
-  cursor: 'pointer',
   position: 'relative',
   overflow: 'hidden',
   display: 'flex',
@@ -36,21 +34,30 @@ export const Product = styled('a', {
     transform: 'translateY(110%)',
     opacity: 0,
     transition: 'all 0.2s ease-in-out',
-
-    strong: {
-      fontSize: '$lg',
-    },
-
-    span: {
-      fontSize: '$xl',
-      fontWeight: 'bold',
-      color: '$green300',
-    }
   },
   '&:hover': {
     footer: {
       transform: 'translateY(0%)',
       opacity: 1,
     }
+  }
+})
+
+export const ProductInfo = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  rowGap: '0.5rem',
+  flex: 1,
+
+
+  strong: {
+    fontSize: '$lg',
+    color: '$white'
+  },
+
+  span: {
+    fontSize: '$xl',
+    fontWeight: 'bold',
+    color: '$green300',
   }
 })

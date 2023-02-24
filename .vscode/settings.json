@@ -1,0 +1,10 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "git.autofetch": true,
+    "gitlens.views.repositories.files.layout": "list",
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+}

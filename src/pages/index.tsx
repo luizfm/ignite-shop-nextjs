@@ -35,6 +35,8 @@ interface HomeProps {
 }
 
 export default function Home({ products }: HomeProps) {
+  console.log(products);
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const { addProductToCart } = useCart();
@@ -155,6 +157,8 @@ export const getStaticProps: GetStaticProps = async () => {
       priceId: price.id,
     };
   });
+
+  console.log(response, products);
 
   return {
     props: {
